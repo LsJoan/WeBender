@@ -100,12 +100,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30.5vw;
-    height: 10.2vw;
-    margin-top: 6.5vw;
+    width: 30.3vw;
+    height: 10.0vw;
+    margin-top: 6.55vw;
     border-radius: 8vw;
     overflow: hidden;
-    margin-left: -5px;
 }
 .slider-cejas1, .slider-cejas2 {
     width: 100%;
@@ -122,7 +121,7 @@ main {
     transform: rotate(10deg);
 }
 .slider-cejas2 {
-    left: 2.1vw;
+    left: 2vw;
     transform: rotate(350deg);
 }
 @keyframes cejass {
@@ -131,6 +130,18 @@ main {
     }
     to {
         top: -9vw;
+    }
+}
+
+@media screen and (max-width: 442px)  {  
+    .slider-ojos {
+        margin-top: 6.45vw;
+    }
+    .slider-cejas1 {
+        left: 2.8vw;
+    }
+    .slider-cejas2 {
+        left: 1.8vw;
     }
 }
 .punto-ojo {
@@ -150,7 +161,6 @@ main {
     left: -7vw;
     animation: ojo02 2s linear infinite alternate;
 }
-
 
 /*
 @media screen and (min-width: 1200px) {
