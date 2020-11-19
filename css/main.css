@@ -117,7 +117,7 @@ main {
     animation: cejass 100s linear 1 normal;
 }
 .slider-cejas1 {
-    left: 2.9vw;
+    left: 2.6vw;
     transform: rotate(10deg);
 }
 .slider-cejas2 {
@@ -161,6 +161,36 @@ main {
     left: -7vw;
     animation: ojo02 2s linear infinite alternate;
 }
+.humo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.humo img {
+    width: 7vw;
+    height: 15vw;
+    position: relative;
+    top: -5vw;
+    left: 16vw;
+    animation: humo 9s linear infinite normal;
+}
+
+@keyframes humo {
+    90%{
+        top: -20vw;
+        opacity: 0.1;
+        width: 0.01vw;
+        height: 0.01vw;
+    }
+    to{
+        top: -20vw;
+        opacity: 0.1;
+        width: 0.01vw;
+        height: 0.01vw;
+    }
+}
+
+
 
 /*
 @media screen and (min-width: 1200px) {
