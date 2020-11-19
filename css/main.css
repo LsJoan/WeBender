@@ -274,7 +274,7 @@ main {
 */
 @media screen and (max-width: 767px) {
     .title {  
-        margin-top: 7vw;
+        margin-top: 8vw;
     }
     .header .logo img {
         width: 120px;
@@ -322,6 +322,9 @@ main {
     }
     .navbar-mobile:hover {
         width: 180px;
+    }
+    .title {  
+        margin-top: 9vw;
     }
 }
 
