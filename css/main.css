@@ -197,6 +197,42 @@ main {
     }
 }
 
+.title {
+    position: absolute;
+    color: transparent;
+    font-size: 0.01vw;
+    opacity: 0;
+    margin-top: 6vw;
+    font-weight: 800;
+    text-shadow: 0vw 0vw 5vw aqua;
+    animation: name 60s linear infinite normal;
+}
+
+@keyframes name {
+    0%{
+        opacity: 0;
+        font-size: 0.01vw;
+    }
+    17.5% {
+        opacity: 0;
+        font-size: 0.01vw;
+    }
+    25%{
+        opacity: 1;
+        font-size: 5vw;
+        -webkit-text-stroke: 0.2vw aqua;
+    }
+    96%{
+        opacity: 1;
+        font-size: 5vw;
+        -webkit-text-stroke: 0.2vw aqua;
+    }
+    to {
+        opacity: 0;
+        font-size: 0.01vw;
+        -webkit-text-stroke: 0.2vw aqua;
+    }
+}
 .humo {
     display: flex;
     justify-content: center;
@@ -237,7 +273,9 @@ main {
 }
 */
 @media screen and (max-width: 767px) {
- 
+    .title {  
+        margin-top: 7vw;
+    }
     .header .logo img {
         width: 120px;
     }
@@ -318,9 +356,7 @@ section .list-group-item {
     background: #ccc;
 }
 
-section .html,
-section .css,
-section .js {
+section .curso {
     display: flex;
     color: aqua;
     font-weight: 700;
@@ -328,21 +364,22 @@ section .js {
     justify-content: center;
     border-radius: 0px 50px 50px 0px;
     animation: Color 10s linear infinite alternate;
+    background: #000;
 }
 
 section .flex-wrap .html {
     width: 80%;
-    background: #000;
 }
 
 section .flex-wrap .css {
     width: 75%;
-    background: #000;
 }
 
 section .flex-wrap .js {
     width: 25%;
-    background: #000;
+}
+section .flex-wrap .boostrap {
+    width: 25%;
 }
 
 @keyframes Color {
