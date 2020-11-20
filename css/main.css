@@ -217,7 +217,7 @@ main {
         opacity: 0;
         font-size: 0.01vw;
     }
-    25%{
+    20%{
         opacity: 1;
         font-size: 5vw;
         -webkit-text-stroke: 0.2vw aqua;
