@@ -1,81 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/breathe.css">
-    <link rel="stylesheet" href="css/main.css">
     <title>WeBender</title>
 </head>
 
 <body>
-        <button type="button" onclick="window.location.href='index.html'" class="hacia-atras">
-            <img src="https://img.icons8.com/ios-filled/50/000000/back.png" />
-        </button>
-        <div class="contenedor">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+    <button type="button" onclick="window.location.href='index.html'" class="hacia-atras">
+        <img src="https://img.icons8.com/ios-filled/50/000000/back.png" />
+    </button>
+    <div class="contenedor" id="contenedor">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="box"></div>
+    </div>
+    <div class="botones">
+        <div class="fondo">
+            <input type="range" name="rango" id="rango" value="" min="0" max="60">
+            <input type="color" name="colores" id="colores">
+            <button type="button" class="btn-dark" id="buto" onclick="color()">Fondo</button>
         </div>
+        <div class="angulos">
+            <button type="button" class="btn-dark" onclick="x()">X</button>
+            <button type="button" class="btn-dark" onclick="y()">Y</button>
+            <button type="button" class="btn-dark" onclick="z()">Z</button>
+        </div>
+        <div class="funciones">
+            <button type="button" class="btn-dark" onclick="rotate1()">10s</button>
+            <button type="button" class="btn-dark" onclick="rotate2()">8s</button>
+            <button type="button" class="btn-dark" onclick="rotate3()">6s</button>
+            <button type="button" class="btn-dark" onclick="rotate4()">4s</button>
+            <button type="button" class="btn-dark" onclick="rotate5()">2s</button>
+            <button type="button" class="btn-dark" onclick="rotate6()">1s</button>
+            <button type="button" class="btn-dark" onclick="rotate7()">0.5s</button>
+            <button type="button" class="btn-dark" onclick="rotate8()">0.3s</button>
+            <button type="button" class="btn-dark" onclick="rotate9()">0.1</button>
+            <button type="button" class="btn-dark" onclick="rotate10()">0.01s</button>
+            <button type="button" class="btn-dark" onclick="rotatePara()">Parar</button>
+        </div>
+
+    </div>
+    <script src="js/breathe.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
