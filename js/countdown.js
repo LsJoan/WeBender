@@ -1,7 +1,7 @@
 
 (() => {
     // Especifique la fecha límite   11   12   2020  
-    const deadlineDate = new Date('November 30, 2020 23:59:59').getTime();
+    const deadlineDate = new Date('November 25, 2020 23:59:59').getTime();
 
     // Guarde en caché todos los cuadros de cuenta atrás en consts
     const countdownDays = document.getElementById('dia');

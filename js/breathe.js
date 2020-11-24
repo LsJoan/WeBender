@@ -1,5 +1,5 @@
 
-
+conte.setAttribute
 /* Rotaciones */
 let conte = document.getElementById("contenedor");
 
