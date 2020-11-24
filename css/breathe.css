@@ -3,7 +3,7 @@ body {
 }
 
 .hacia-atras {
-    width: 80px;
+    width: 80px; 
     height: 60px;
     background: aqua;
     margin: 10px;
@@ -65,7 +65,7 @@ body {
     margin: 0px 1vw;
 }
 .contenedor { 
-    --size: 45vw;
+    --size: 40vw;
     height: var(--size);
     width: var(--size);
     position: relative;
