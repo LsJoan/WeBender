@@ -2,7 +2,12 @@
 (() => {
     // Especifique la fecha límite   11   12   2020  
     const deadlineDate = new Date('November 25, 2020 23:59:59').getTime();
-
+    const header = document.querySelector(".header");
+    const cejas1 = document.querySelector(".slider-cejas1");
+    const cejas2 = document.querySelector(".slider-cejas2");
+    const ojos1 = document.querySelector(".slider-pupila1");
+    const ojos2 = document.querySelector(".slider-pupila2");
+    const title = document.querySelector(".title");
     // Guarde en caché todos los cuadros de cuenta atrás en consts
     const countdownDays = document.getElementById('dia');
     const countdownHours = document.getElementById('hora');
@@ -28,5 +33,24 @@
         countdownHours.innerHTML = hours;
         countdownMinutes.innerHTML = minutes;
         countdownSeconds.innerHTML = seconds;
+
+        
+    if(days < 0 && hours < 0 && minutes < 0 && seconds < 0) {
+        countdownDays.innerHTML = 0;
+        countdownHours.innerHTML = 0;
+        countdownMinutes.innerHTML = 0;
+        countdownSeconds.innerHTML = 0;
+        cejas1.style.animation = " cejasActiva 60s linear infinite normal";
+        cejas2.style.animation = " cejasActiva 60s linear infinite normal";
+        title.style.display = "none";
+        ojos1.style.animation = " ojoActivo 60s linear infinite alternate";
+        ojos2.style.animation = " ojoActivo 60s linear infinite alternate";
+    }
+    else {
+        return true;
+    }
+
     }, 1000);
+
+
 })();
