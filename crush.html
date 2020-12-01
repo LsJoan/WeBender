@@ -12,16 +12,15 @@
         }
         
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            width: 100%;
+            margin: auto;
         }
         
         .cuadro {
-            width: 600px;
+            width: 70%;
             height: 300px;
             background: #ccc;
+            margin: auto;
         }
         
         .botones {
@@ -139,6 +138,21 @@
             top: -150px;
             left: 0px;
         }
+        
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+        
+        .text {
+            display: none;
+            width: 70%;
+            text-align: center;
+            margin: auto;
+            padding: 50px;
+            border-radius: 40px;
+            background: #ccc;
+        }
     </style>
 </head>
 
@@ -148,22 +162,27 @@
         <div class="cuadro" id="cuadro">
             <h1>¿ME LA CHUPAS?</h1>
             <div class="botones">
-                <div class="si">
+                <div class="si" onclick="clic()">
                     <button type="button" id="si">SI</button>
                 </div>
                 <div class="no">
-                    <button type="button" id="no1" onmouseover="no1()" onclick="clic()">NO</button>
-                    <button type="button" id="no2" onmouseover="no2()" onclick="clic()">NO</button>
-                    <button type="button" id="no3" onmouseover="no3()" onclick="clic()">NO</button>
-                    <button type="button" id="no4" onmouseover="no4()" onclick="clic()">NO</button>
-                    <button type="button" id="no5" onmouseover="no5()" onclick="clic()">NO</button>
-                    <button type="button" id="no6" onmouseover="no6()" onclick="clic()">NO</button>
-                    <button type="button" id="no7" onmouseover="no7()" onclick="clic()">NO</button>
-                    <button type="button" id="no8" onmouseover="no8()" onclick="clic()">NO</button>
-                    <button type="button" id="no9" onmouseover="no9()" onclick="clic()">NO</button>
-                    <button type="button" id="no10" onmouseover="no10()" onclick="clic()">NO</button>
-                    <button type="button" id="no11" onmouseover="no11()" onclick="clic()">NO</button>
+                    <button type="button" id="no1" onmouseover="no1()">NO</button>
+                    <button type="button" id="no2" onmouseover="no2()">NO</button>
+                    <button type="button" id="no3" onmouseover="no3()">NO</button>
+                    <button type="button" id="no4" onmouseover="no4()">NO</button>
+                    <button type="button" id="no5" onmouseover="no5()">NO</button>
+                    <button type="button" id="no6" onmouseover="no6()">NO</button>
+                    <button type="button" id="no7" onmouseover="no7()">NO</button>
+                    <button type="button" id="no8" onmouseover="no8()">NO</button>
+                    <button type="button" id="no9" onmouseover="no9()">NO</button>
+                    <button type="button" id="no10" onmouseover="no10()">NO</button>
+                    <button type="button" id="no11" onmouseover="no11()">NO</button>
                 </div>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="text">
+                <h2>UY QUE ESPERAS, CUANDO ME LA CHUPAS?</h2>
             </div>
         </div>
     </div>
@@ -469,7 +488,12 @@
         }
 
         function clic() {
-            si.style.display = "none";
+            let cuaa = document.querySelector('.cuadro');
+            let text = document.querySelector('.text');
+
+            cuaa.style.display = "none";
+            text.style.display = "block";
+
         }
     </script>
 </body>
