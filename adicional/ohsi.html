@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿COGEMOS?</title>
+    <link rel="stylesheet" href="ohsi.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabla cogemos" style="display: block;">
+            <div class="pregunta">
+                <h2 class="title">¿Cogemos?</h2>
+            </div>
+            <div class="respuesta">
+                <div class="si">
+                    <button type="button" class="btn " onclick="si()">Si</button>
+                </div>
+
+                <div class="no">
+                    <button type="button" class="btn " onclick="clic()">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="tabla nocogemos" style="display: none;">
+            <div class="texto">
+                <h2 style="position: relative; top: 200px;">Ok! te lo piedes.</h2>
+            </div>
+        </div>
+        <div class="tabla sicogemos" style="display: none;">
+            <div class="texto">
+                <h2 style="position: relative; top: 200px;">Uy gracias! Solo quería saber si me tenías ganas.☺</h2>
+            </div>
+        </div>
+        <div class="tabla seguro-cogemos" style="display: none;">
+            <div class="pregunta">
+                <h2 class="title">¿Seguro que quieres coger?</h2>
+            </div>
+            <div class="respuesta">
+                <div class="si-ok">
+                    <button type="button" class="btn" onclick="siOk()">Si</button>
+                </div>
+
+                <div class="no-ok">
+                    <button type="button" class="btn" onclick="noOk()">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="atras">
+            <a href="../adicional/ohsi.html"><img src="https://img.icons8.com/fluent/48/000000/long-arrow-left.png" /></a>
+        </div>
+    </div>
+    </div>
+    <script>
+        function clic() {
+            let cogemos = document.querySelector('.cogemos'),
+                noCogemos = document.querySelector('.nocogemos');
+
+            cogemos.style.display = "none";
+            noCogemos.style.display = "block";
+        }
+
+        function noOk() {
+            let seguroCogemos = document.querySelector('.seguro-cogemos'),
+                noCogemos = document.querySelector('.nocogemos');
+
+            seguroCogemos.style.display = "none";
+            noCogemos.style.display = "block";
+        }
+
+        function si() {
+            let cogemos = document.querySelector('.cogemos'),
+                seguroCogemos = document.querySelector('.seguro-cogemos');
+
+            cogemos.style.display = "none";
+            seguroCogemos.style.display = "block";
+        }
+
+        function siOk() {
+            let seguroCogemos = document.querySelector('.seguro-cogemos'),
+                siCogemos = document.querySelector('.sicogemos');
+
+            seguroCogemos.style.display = "none";
+            siCogemos.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
