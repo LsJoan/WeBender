@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti</title>
+    <link rel="stylesheet" href="ohyeah.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cuadro" id="cuadro">
+            <h1>¿ME LA CHUPAS?</h1>
+            <div class="botones">
+                <div class="no" onclick="clic()">
+                    <button type="button" id="no">NO</button>
+                </div>
+                <div class="si activa" onclick="si()">
+                    <button type="button" id="si">SI</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="text">
+                <h2 id="eltexto">UY ENTONCES TE LO PIEDES MI VIDA!</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clic() {
+            let cuaa = document.querySelector('.cuadro');
+            let text = document.querySelector('.text');
+
+            cuaa.style.display = "none";
+            text.style.display = "block";
+
+        }
+    </script>
+</body>
+
+</html>
