@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿COGEMOS?</title>
+    <link rel="stylesheet" href="nena.css">
+</head>
+
+<body>
+    <!--SI NO QUIERES CAMBIAR ESTO A ALGO NEGATIVO, OSEA QUIERES
+         QUE EL "SI" SEA EL QUE SE MUEVA SOLO CAMBIA LOS TITULOS 
+        Y LAS RESPUESTAS-->
+    <!--PERO SI QUIERES QUE EL "NO SE MUEVA" SIGUE TODOS ESTOS PASOS DETALLADAMENTE-->
+    <div class="container">
+        <!--ESTA ES LA PRIMERA PAGINA "Y ESTO QUE VES EN UN COMENTARIO
+             PARA INDICARTE QUE HACER"-->
+        <!--ESTA ES LA PRIMERA PAGINA "Y ESTO QUE VES EN UN COMENTARIO
+             PARA INDICARTE QUE HACER"-->
+        <div class="tabla cogemos" style="display: block;">
+            <div class="pregunta">
+                <!--AQUI CAMBIAS EL TITULO DE LA PRIMERA PAGINA-->
+                <!--AQUI CAMBIAS EL TITULO DE LA PRIMERA PAGINA-->
+                <!--CAMBIA "cogemos" POR LO QUE QUIERAS-->
+                <h2 class="title">¿Cogemos?</h2>
+            </div>
+            <!--SI QUIERES PONER QUE EL "NO" SEA EL QUE SE MUEVA-->
+            <!--AQUI DEBES QUITARLE EL "activo" A "SI" Y PONERSELO A "NO"-->
+            <div class="respuesta">
+                <!--YO SOY "SI"-->
+                <div class="si activo">
+                    <!--AQUI DEBES CAMBIAR EL "siactivo()" POR "noactivo()"-->
+                    <button type="button" class="btn " onclick="siactivo()">Si</button>
+                </div>
+                <!--YO SOY "NO"-->
+                <div class="no">
+                    <!--AQUI DEBES CAMBIAR EL "noactivo()" POR "siactivo()"-->
+                    <button type="button" class="btn " onclick="noactivo()">No</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN DE LA PRIMERA PAGINA-->
+        <!--ESTA ES LA SEGUNDA PAGINA-->
+        <div class="tabla seguro-cogemos" style="display: none;">
+            <div class="pregunta">
+                <!--ESTE ES EL TITULO DE LA SEGUNDA PAGINA-->
+                <!--ESTE ES EL TITULO DE LA SEGUNDA PAGINA-->
+                <!--SI HAS CAMBIADO EL "ACTIVO" DEBES PONER-->
+                <!--UN TITULO COMO "¿Seguro que no quieres coger?-->
+                <h2 class="title">¿Seguro que quieres Coger?</h2>
+            </div>
+            <!--AQUI ES LO MISMO, SOLO CAMBIA EL-->
+            <!--"ok-activo" DEL "si-ok" A "no-ok"-->
+            <div class="respuesta">
+                <!--SOY EL "SI-OK"-->
+                <div class="si-ok  ok-activo">
+                    <!--AQUI CAMBIA EL EL "siok()" por "nook()"-->
+                    <button type="button" class="btn" onclick="siok()">Si</button>
+                </div>
+                <!--SOY EL "NO-OK"-->
+                <div class="no-ok">
+                    <!--AQUI CAMBIA EL EL "nook()" por "siok()"-->
+                    <button type="button" class="btn" onclick="nook()">No</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN DE LA SEGUNDA PAGINA-->
+        <!--ESTO APARECE CUANDO LE DAS A "NO"-->
+        <!--PERO SI CAMBIASTE EL ACTIVO-->
+        <!--CAMBIA EL "nocogemos" POR "sicogemos"-->
+        <div class="tabla nocogemos" style="display: none;">
+            <div class="texto">
+                <!--ESTA ES LA RESPUESTA DE "NO"-->
+                <h2 style="position: relative; top: 200px;">Ok! te lo piedes.</h2>
+            </div>
+        </div>
+
+        <!--ESTO APARECE CUANDO LE DAS A "SI"-->
+        <!--CAMBIA EL "sicogemos" POR "nocogemos"-->
+        <div class="tabla sicogemos" style="display: none;">
+            <div class="texto">
+                <!--ESTA ES LA RESPUESTA DE "SI"-->
+                <!--CAMBIA SEGUN EL TITULO QUE PUSISTE-->
+                <h2 style="position: relative; top: 200px;">Uy gracias! Solo quería saber si me tenías ganas.☺</h2>
+            </div>
+        </div>
+
+        <div class="atras">
+            <a href="../nena/nena.html"><img src="https://img.icons8.com/fluent/48/000000/long-arrow-left.png" /></a>
+        </div>
+    </div>
+    </div>
+    <script>
+        function siactivo() {
+            let cogemos = document.querySelector('.cogemos'),
+                seguroCogemos = document.querySelector('.seguro-cogemos');
+
+            cogemos.style.display = "none";
+            seguroCogemos.style.display = "block";
+        }
+
+        function noactivo() {
+            let cogemos = document.querySelector('.cogemos'),
+                noCogemos = document.querySelector('.nocogemos');
+
+            cogemos.style.display = "none";
+            noCogemos.style.display = "block";
+        }
+
+        function nook() {
+            let seguroCogemos = document.querySelector('.seguro-cogemos'),
+                noCogemos = document.querySelector('.nocogemos');
+
+            seguroCogemos.style.display = "none";
+            noCogemos.style.display = "block";
+        }
+
+        function siok() {
+            let seguroCogemos = document.querySelector('.seguro-cogemos'),
+                siCogemos = document.querySelector('.sicogemos');
+
+            seguroCogemos.style.display = "none";
+            siCogemos.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
