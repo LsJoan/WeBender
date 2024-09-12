@@ -1,7 +1,7 @@
 
 (() => {
     // Especifique la fecha límite   11   12   2020  
-    const deadlineDate = new Date('November 30, 2023, 23:59:59').getTime();
+    const deadlineDate = new Date('November 30, 2024, 23:59:59').getTime();
     const header = document.querySelector(".header");
     const cejas1 = document.querySelector(".slider-cejas1");
     const cejas2 = document.querySelector(".slider-cejas2");
